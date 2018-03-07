@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF=8">
+		<title>Min HTML og javascript testside</title>
+	</head>
+
+	<body>
+		<h1></h1>
+		<img id="banan" onclick="antalBananer()" src="billeder/banan.png" width="100" alt="Banan">
+		<img id="paere" onclick="antalPaerer()" src="billeder/paere.png" width="100" alt="paere">
+		<img id="aeble" onclick="antal(this.id)" src="billeder/aeble.png" width="100" alt="aeble">
+		<img id="ananas" onclick="antal(this.id)" src="billeder/ananas.png" width="100" alt="ananas">
+		<img id="appelsin" onclick="antal(this.id)" src="billeder/appelsin.png" width="100" alt="appelsin">
+		<br> 
+		<p id="bananAntal">0</p>
+		<p id="paereAntal">0</p>
+		<p id="aebleAntal">0</p>
+		<p id="ananasAntal">0</p>
+		<p id="appelsinAntal">0</p>
+		<button type="button" onclick="iAlt()">Klik her for at se samlet antal og pris</button><br>
+		<p id="frugteriAlt">0</p>
+		<p id="prisiAlt">0</p>
+
+
+
+	</body>
+</html>
+
+<script>
+
+	function antalBananer() {
+		
+		var Bananer = 0;
+		var i = 1;
+		
+		do {
+			bananer += + i;
+			i++;
+		} while (i > 0);
+
+		document.getElementById("bananAntal").innerHTML = bananer + " Bananer";
+	}
+
+
+	function antalPaerer() {
+		
+		}
+
+	function iAlt() {
+		var bananer = document.getElementById("bananAntal").value;
+		var paerer = document.getElementById("paereAntal").value;
+		var antalBananer = parseInt(bananer);
+		var antalPaerer = parseInt(paerer);		
+		var frugteriAlt = antalBananer + antalPaerer;
+		var prisiAlt = frugteriAlt * 4;
+		document.getElementById("frugteriAlt").innerHTML =  frugteriAlt + " frugter i alt";
+		document.getElementById("prisiAlt").innerHTML = prisiAlt + " Kroner";
+
+		 
+	}	
+
+			/*document.getElementById("paereAntal").innerHTML = paerere_ialt + " Pærere";
+			document.getElementById("aebleAntal").innerHTML = aebler_ialt + " Æbler";
+			document.getElementById("ananasAntal").innerHTML = ananaser_ialt + " Ananaser";
+			document.getElementById("appelsinAntal").innerHTML = appelsiner_ialt + " Appelsiner"; 
+
+			if (clicked_id == "banan"){
+				bananer_ialt += + 1;*/
+
+
+</script>
+
+
+
